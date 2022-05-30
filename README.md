@@ -15,6 +15,7 @@ Before you install TensorFlow for Jetson, ensure you:
    - Install system packages required by TensorFlow:
       ```
       sudo apt-get update
+      sudo apt-get upgrade
       sudo apt-get install libhdf5-serial-dev hdf5-tools libhdf5-dev zlib1g-dev zip libjpeg8-dev liblapack-dev libblas-dev gfortran
       ```
    - Install and upgrade pip3:
