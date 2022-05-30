@@ -14,50 +14,48 @@ Before you install TensorFlow for Jetson, ensure you:
    - Install [JetPack](https://developer.nvidia.com/embedded/jetpack) on your Jetson device.
    - Install system packages required by TensorFlow:
       ```
-        sudo apt-get update
-        sudo apt-get install libhdf5-serial-dev hdf5-tools libhdf5-dev zlib1g-dev zip libjpeg8-dev liblapack-dev libblas-dev gfortran
+      sudo apt-get update
+      sudo apt-get install libhdf5-serial-dev hdf5-tools libhdf5-dev zlib1g-dev zip libjpeg8-dev liblapack-dev libblas-dev gfortran
       ```
    - Install and upgrade pip3:
       ```
-        sudo apt-get install python3-pip
-        sudo -H pip3 install --upgrade setuptools
+      sudo apt-get install python3-pip
+      sudo -H pip3 install --upgrade setuptools
       ```
    - Install the Python package dependencies:
       ```
-        sudo -H pip3 install -U testresources numpy
-        sudo -H pip3 install -U testresources
-        sudo -H pip3 install -U numpy==1.16.1
-        sudo pip3 install -U --no-deps future==0.18.2 mock==3.0.5 keras_preprocessing==1.1.2 keras_applications==1.0.8 gast==0.4.0 protobuf pybind11 cython pkgconfig
-        sudo env H5PY_SETUP_REQUIRES=0 pip3 install -U h5py==3.1.0
+      sudo -H pip3 install -U testresources
+      sudo -H pip3 install -U numpy==1.16.1
+      sudo pip3 install -U --no-deps future==0.18.2 mock==3.0.5 keras_preprocessing==1.1.2 keras_applications==1.0.8 gast==0.4.0 protobuf==3.6.0 pybind11 cython pkgconfig
+      sudo env H5PY_SETUP_REQUIRES=0 pip3 install -U h5py==3.1.0
       ```
 <u> <b> 2- Set up the Virtual Environment </b></u>
 
 - Install the virtualenv package and create a new Python 3 virtual environment:
 
    ```
-      sudo apt-get install virtualenv
-      python3 -m virtualenv -p python3 <venv_name>
-      source env1/bin/activate
+   sudo apt-get install virtualenv
+   python3 -m virtualenv -p python3 <venv_name>
    ```
 - Activate the virtual environment:
 
    ```
-      source <venv_name>/bin/activate
+   source <venv_name>/bin/activate
    ```
 
 - Install the desired version of TensorFlow and its dependencies:
 
    ```
-      pip3 install -U numpy grpcio absl-py py-cpuinfo psutil portpicker six mock requests gast h5py astor termcolor protobuf keras-applications keras-preprocessing wrapt google-pasta setuptools testresources
-      sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 tensorflow
+   pip3 install -U numpy grpcio absl-py py-cpuinfo psutil portpicker six mock requests gast h5py astor termcolor protobuf keras-applications keras-preprocessing wrapt google-pasta setuptools testresources
+   sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 tensorflow
    ```
 - Install FEDn:
 
    ```
-     git clone https://github.com/scaleoutsystems/fedn.git
-     cd fedn
-     git checkout develop
-     cd fedn
+  git clone https://github.com/scaleoutsystems/fedn.git
+  cd fedn
+  git checkout develop
+  cd fedn
   ```
 - Modify the <i> setup.py</i> file in order to fit with the installed dependencies and python version.
   ```
