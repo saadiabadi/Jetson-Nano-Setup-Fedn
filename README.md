@@ -47,7 +47,7 @@ Before you install TensorFlow for Jetson, ensure you:
 - Install the desired version of TensorFlow and its dependencies:
 
    ```
-   pip3 install -U numpy==1.16.1 grpcio absl-py py-cpuinfo psutil portpicker six mock requests gast h5py==3.1.0 astor termcolor protobuf keras-applications keras-preprocessing wrapt google-pasta setuptools testresources
+   pip3 install -U numpy==1.19.1 grpcio absl-py py-cpuinfo psutil portpicker six mock requests gast h5py astor termcolor protobuf keras-applications keras-preprocessing wrapt google-pasta setuptools testresources
    sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 tensorflow
    ```
 - Install FEDn:
